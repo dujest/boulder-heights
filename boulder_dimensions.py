@@ -1,8 +1,7 @@
 import pandas as pd
+import geopandas as gpd
 import rasterio
 import rasterio.mask
-from rasterio.features import geometry_mask
-import geopandas as gpd
 
 # Function to calculate dimensions of a boulder
 def calculate_boulder_dimensions(boulder_polygon, bathymetry_data):
