@@ -13,7 +13,7 @@ if __name__ == "__main__":
     block_number = os.getenv("BLOCK_NUMBER")
 
     # Run the main function
-    boulder_gdf, bathymetry_data = main(input_shp_path, input_tif_path)
+    boulder_gdf = main(input_shp_path, input_tif_path)
 
     # Create and save the output GeoDataFrame
     output_gdf = create_output_gdf(boulder_gdf, block_number)

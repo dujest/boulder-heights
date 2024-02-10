@@ -12,4 +12,4 @@ def main(input_shp_path, input_tif_path):
     boulder_gdf['Dimensions'] = boulder_gdf['geometry'].apply(lambda boulder_polygon: calculate_boulder_dimensions(boulder_polygon, bathymetry_data))
 
     # Return the processed GeoDataFrame and bathymetry data
-    return boulder_gdf, bathymetry_data
+    return boulder_gdf
