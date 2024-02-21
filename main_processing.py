@@ -32,7 +32,7 @@ class BoulderProcessor:
                                        "Length": boulder_gdf['Dimensions'].apply(lambda dim: dim["Length"]).to_numpy().flatten(),
                                        "Width": boulder_gdf['Dimensions'].apply(lambda dim: dim["Width"]).to_numpy().flatten(),
                                        "Height": boulder_gdf['Dimensions'].apply(lambda dim: dim["Height"]).to_numpy().flatten(),
-                                       "geometry": gpd.GeoSeries(boulder_gdf.centroid)}, crs=boulder_gdf.crs)
+                                       "geometry": boulder_gdf['geometry']}, crs=boulder_gdf.crs)
 
         return output_gdf
 
